@@ -20,7 +20,7 @@ button.onclick = function() {
         confetti.start(2000)
     }
     if (count >= 11) {
-        confetti.start(2000, 500, 1000)
+        confetti.start(2000, 250, 500)
     }
 
     setTimeout(function() {button.style.display = "flex"}, display.length * 200)
