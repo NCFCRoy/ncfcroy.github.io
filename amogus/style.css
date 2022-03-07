@@ -14,6 +14,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    user-select: none;
 }
 
 .middle{
@@ -22,6 +23,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    user-select: none;
 }
 
 .bottom{
@@ -30,6 +32,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    user-select: none;
 }
 
 .button {
