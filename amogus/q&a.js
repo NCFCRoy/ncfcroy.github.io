@@ -34,6 +34,16 @@ typeWriter = () => {
     }
 }
 
+let lastNumber
+
+function getRandNumber() {
+  var x = Math.floor((Math.random() * 5) + 1)
+  if (x == lastNumber) {
+    return getRandNumber()
+  }
+  return x
+}
+
 function changeDisplay(seq) {
     if (seq == 1) {
         image.src = "character/Greet.png"
@@ -86,9 +96,27 @@ function changeDisplay(seq) {
         button.textContent = "🎊"
     }
     if (seq > 10) {
-        image.src = "character/Cheer.png"
+        let colour = "rgb(" + (Math.floor(Math.random() *256)) + "," + (Math.floor(Math.random() *256)) + "," + (Math.floor(Math.random() *256))
+        let randomNo = getRandNumber()
+        lastNumber = randomNo
+        if (randomNo == 1) {
+            image.src = "character/Cheer.png"
+        }
+        if (randomNo == 2) {
+            image.src = "character/Greet.png"
+        }
+        if (randomNo == 3) {
+            image.src = "character/Holup.png"
+        }
+        if (randomNo == 4) {
+            image.src = "character/Normal.png"
+        }
+        if (randomNo == 5) {
+            image.src = "character/Thinking.png"
+        }
         display = ""
         button.textContent = "🎊"
-        document.body.style.background = "rgb(" + (Math.floor(Math.random() *256)) + "," + (Math.floor(Math.random() *256)) + "," + (Math.floor(Math.random() *256))
+        document.body.style.background = colour
+        button.style.background = colour
     }
 }
